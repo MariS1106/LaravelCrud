@@ -14,6 +14,9 @@
 	<h3>{{$mensagem->autor}}</h3>
 	<p><a href="/mensagens/{{$mensagem->id}}">{{$mensagem->titulo}}</a></p>
 	<p>{{$mensagem->texto}}</p>
+	<a href="/mensagens/{{$mensagem->id}}">Visualizar</a>
+	<a href="/mensagens/{{$mensagem->id}}/edit">Editar</a>
+	<a href="/mensagens/{{$mensagem->id}}/delete">Deletar</a>
 	<br>
 @endforeach
 

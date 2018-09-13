@@ -1,4 +1,4 @@
-<h1>Mensagem {{ $id }}</h1>
+<h1>Mensagem</h1>
 <hr>
 <h3><b>ID:</b>{{$mensagem->id}}</h3>
 <h3><b>Autor:</b>{{$mensagem->autor}}</h3>

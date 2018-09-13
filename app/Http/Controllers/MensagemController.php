@@ -150,6 +150,7 @@ class MensagemController extends Controller
      */
     public function delete($id)
     {
+        
         $mensagem = Mensagem::find($id);
         return view('mensagem.delete',['mensagem' => $mensagem]);
 
@@ -166,6 +167,6 @@ class MensagemController extends Controller
     {
         $mensagem = Mensagem::findOrFail($id);
         $mensagem->delete($id);
-        return redirect('/mensagem')->with('success', 'Mensagem excluída com sucesso!!!');
+        return redirect('/mensagens')->with('success', 'Mensagem excluída com sucesso!!!');
     }
 }
