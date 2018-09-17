@@ -13,12 +13,19 @@
 @foreach($mensagens as $mensagem)
 	<h3>{{$mensagem->autor}}</h3>
 	<p><a href="/mensagens/{{$mensagem->id}}">{{$mensagem->titulo}}</a></p>
+	@auth
 	<p>{{$mensagem->texto}}</p>
 	<a href="/mensagens/{{$mensagem->id}}">Visualizar</a>
 	<a href="/mensagens/{{$mensagem->id}}/edit">Editar</a>
 	<a href="/mensagens/{{$mensagem->id}}/delete">Deletar</a>
 	<br>
+	@endauth
 @endforeach
+
+<br>
+@auth
+  <p><a href="/atividades/create">Criar novo registro</a></p>
+@endauth
 
 
 
