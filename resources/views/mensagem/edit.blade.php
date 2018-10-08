@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Formulário de Edição da Mensagem</h1>
 <hr>
 
@@ -24,4 +27,5 @@
 
 </form>
 
+@endsection
 

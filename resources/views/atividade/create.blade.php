@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Formulário de Cadastro de Atividade</h1>
 <hr>
 
@@ -14,10 +17,28 @@
 	</div>
   @endif
 
-<form action="/atividades" method="post">
-	{{ csrf_field() }}
-	Título: 		<input type="text" name="title"> 	     <br>
-	Descrição:		<input type="text" name="description">   <br>
-	Agendado para:  <input type="datetime-local" name="scheduledto">   <br>
-	<input type="submit" value="Salvar">
-</form>
+  <div class="row">
+		<div class="col-md-12">
+			<form action="/atividades" method="post">
+				{{ csrf_field() }}
+				<div class="form-group row">
+					<label class="col-form-label col-form-label-lg" for="title">Título</label>
+					<input class="form-control form-control-lg" type="text" id="title" name="title">
+					<small id="titleHelp" class="form-text text-muted">Coloque um título para sua atividade</small>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label col-form-label-lg" for="description">Descrição</label>
+					<input class="form-control form-control-lg" type="text" id="description" name="description">
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label col-form-label-lg" for="scheduledto">Data/Hora da atividade</label>
+					<input class="form-control form-control-lg" type="datetime-local" id="scheduledto" name="scheduledto">
+					<small id="scheduledtoHelp" class="form-text text-muted">Use o formato: 2018-12-30 10:10:10</small>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Salvar</button>
+			</form>
+		</div>
+	</div>
+
+@endsection

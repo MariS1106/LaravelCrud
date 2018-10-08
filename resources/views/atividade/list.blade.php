@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Lista de Atividades</h1>
 <hr>
 
@@ -16,9 +19,9 @@
 	<p>Descrição: <b>{{$atividade->description}}</b></p>
   @auth
   <p>Ações: 
-    <a href="/atividades/{{$atividade->id}}">Ver Mais</a>
-    <a href="/atividades/{{$atividade->id}}/edit">Editar</a> 
-    <a href="/atividades/{{$atividade->id}}/delete">Deletar</a>
+    <a class="btn btn-outline-primary" href="/atividades/{{$atividade->id}}">Ver Mais</a>
+    <a class="btn btn-outline-primary" href="/atividades/{{$atividade->id}}/edit">Editar</a> 
+    <a class="btn btn-outline-primary" href="/atividades/{{$atividade->id}}/delete">Deletar</a>
   </p>
   @endauth
 	<br>
@@ -28,3 +31,5 @@
 @auth
   <p><a href="/atividades/create">Criar novo registro</a></p>
 @endauth
+
+@endsection
